@@ -3,7 +3,7 @@ pipeline {
     tools {
     maven 'maven'
     }
-    stages {
+    
         stage ('Clone') {
             steps {
                 git 'https://github.com/4ndrevv/gilded-rose-jenkin-1-.git'
