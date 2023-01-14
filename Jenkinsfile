@@ -3,7 +3,7 @@ pipeline {
     tools {
     maven 'maven'
     }
-    
+    stages {
         stage ('Clone') {
             steps {
                 git 'https://github.com/4ndrevv/gilded-rose-jenkin-1-.git'
@@ -26,6 +26,7 @@ pipeline {
             always {
                 junit(
                     allowEmptyResults:true,
-                    testResults: 'test-report/.xml' )}
+                    testResults: 'test-report/.xml' )
+                    }
         }
     }
